@@ -54,40 +54,38 @@
 
 <h2 class="page-title">Our Products</h2>
 
+<div class="container mb-4">
+    <div class="d-flex justify-content-end">
+        <a href="/products/new" class="btn btn-primary">
+            Add Product
+        </a>
+    </div>
+</div>
+
 <div class="container">
     <div class="row g-4">
 
-        <!-- Dummy Product 1 -->
-        <div class="col-md-4">
+        <div class="col-md-4" th:each="product : ${products}">
             <div class="product-card">
-                <img src="https://picsum.photos/300" class="product-image">
-                <div class="product-title">Sample Product 1</div>
-                <div class="product-price">$29.99</div>
-                <a href="#" class="btn btn-primary w-100">View Details</a>
-            </div>
-        </div>
+                <img src="https://picsum.photos/300"
+                     class="product-image">
 
-        <!-- Dummy Product 2 -->
-        <div class="col-md-4">
-            <div class="product-card">
-                <img src="https://picsum.photos/301" class="product-image">
-                <div class="product-title">Sample Product 2</div>
-                <div class="product-price">$49.99</div>
-                <a href="#" class="btn btn-primary w-100">View Details</a>
-            </div>
-        </div>
+                <div class="product-title"
+                     th:text="${product.name}">
+                </div>
 
-        <!-- Dummy Product 3 -->
-        <div class="col-md-4">
-            <div class="product-card">
-                <img src="https://picsum.photos/302" class="product-image">
-                <div class="product-title">Sample Product 3</div>
-                <div class="product-price">$19.99</div>
-                <a href="#" class="btn btn-primary w-100">View Details</a>
+                <div class="product-price"
+                     th:text="'$' + ${product.price}">
+                </div>
+
+                <a href="#" class="btn btn-primary w-100">
+                    View Details
+                </a>
             </div>
         </div>
 
     </div>
+
 </div>
 
 </body>
