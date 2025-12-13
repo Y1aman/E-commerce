@@ -1,5 +1,7 @@
-package com.yaman.ecommerce;
+package com.yaman.ecommerce.services;
 
+import com.yaman.ecommerce.models.User;
+import com.yaman.ecommerce.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

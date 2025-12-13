@@ -1,5 +1,6 @@
-package com.yaman.ecommerce;
+package com.yaman.ecommerce.repositories;
 
+import com.yaman.ecommerce.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {
